@@ -1,49 +1,192 @@
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.logo {
-  float: none;
+.logo{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 40px;
+  left: 100px;
+  top: 100px;
+}
+
+.logotxt{
+  position: absolute;
+  width: 78px;
+  height: 16px;
+  left: 140px;
+  top: 120px;
+}
+
+.links{
+position: absolute;
+width: 42px;
+height: 26px;
+left: 331px;
+top: 114px;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 26px;
+}
+
+.heading{
+position: absolute;
+width: 399px;
+height: 44px;
+left: 140px;
+top: 374px;
+font-family: Georgia;
+color: #131821;
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 44px;
+}
+
+.subheading{
+position: absolute;
+width: 400px;
+height: 56px;
+left: 140px;
+top: 433px;
+font-family: Arial;
+color: #6A707B;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+}
+
+.line{
+position: absolute;
+width: 4px;
+height: 70px;
+left: 100px;
+top: 539px;
+background: #4066A5;
+}
+
+.box{
+position: absolute;
+width: 663px;
+height: 70px;
+left: 100px;
+top: 539px;
+background: #FFFFFF;
+border: 1px solid #E3E3E4;
+box-sizing: border-box;
+}
+
+.arrow{
+  position: absolute;
+  width: 24px;
+  height: 14px;
+  left: 699px;
+  top: 567px;
+  background: #131821;
+}
+
+.checkbox{
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 140px;
+  top: 662px;
+  background: #4066A5;
+  border-radius: 3px;
+}
+
+.checkmark{
+  position: absolute;
+  width: 14px;
+  height: 11px;
+  left: 146px;
+  top: 670px;
+}
+
+.agree{
+position: absolute;
+width: 359px;
+height: 28px;
+left: 181px;
+top: 663px;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+color: #6A707B;
+}
+
+.line{
+position: absolute;
+width: 400px;
+height: 1px;
+left: 140px;
+top: 740px;
+background: #E3E3E4;
+}
+
+.circleBase {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  border: 2px solid #E2E3E4;
+  top: 790px;
+}
+
+.IconBase {
+  top: 790px;
 }
 
 
-/* Add a black background color to the top navigation */
-.topnav {
-  float: center;
-  background-color: #333;
-  overflow: hidden;
-  margin-top:112px;
-  width: 100%;
+.facebook {
+    left: 217px;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  position: relative;
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-  font-size: 17px;
+.Ficon{
+left: 12.34%;
+right: 87.24%;
+bottom: 23.89%;
+background: #131821;
+opacity: 0.3;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.instagram {
+    left: 283px;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+.Iicon{
+  position: absolute;
+  left: 15.57%;
+  right: 83.59%;
+  bottom: 23.89%;
+  background: #131821;
+  opacity: 0.3;
+}
+
+.twitter {
+    left: 349px;
+}
+
+.Ticon{
+  position: absolute;
+  left: 19.01%;
+  right: 80.16%;
+  bottom: 23.98%;
+  background: #131821;
+  opacity: 0.3;
+}
+
+.youtube {
+    left: 415px;
+}
+
+.Yicon{
+  position: absolute;
+  left: 22.45%;
+  right: 76.72%;
+  bottom: 24.17%;
+  background: #131821;
+  opacity: 0.3;
 }
