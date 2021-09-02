@@ -123,7 +123,18 @@ width: 400px;
 height: 1px;
 left: 140px;
 top: 740px;
+
 background: #E3E3E4;
+}
+
+.Dline{
+  position: absolute;
+  width: 4px;
+  height: 70px;
+  left: 100px;
+  top: 539px;
+
+  background: #4066A5;
 }
 
 .circleBase {
@@ -135,21 +146,18 @@ background: #E3E3E4;
   top: 790px;
 }
 
-.IconBase {
-  top: 790px;
-}
-
-
 .facebook {
     left: 217px;
 }
 
+.IconBase {
+  position: absolute;
+  background: #131821;
+}
+
 .Ficon{
-left: 12.34%;
-right: 87.24%;
-bottom: 23.89%;
-background: #131821;
-opacity: 0.3;
+left: 237px;
+top: 805px;
 }
 
 .instagram {
@@ -157,12 +165,8 @@ opacity: 0.3;
 }
 
 .Iicon{
-  position: absolute;
-  left: 15.57%;
-  right: 83.59%;
-  bottom: 23.89%;
-  background: #131821;
-  opacity: 0.3;
+  left: 300px;
+  top: 805px;
 }
 
 .twitter {
@@ -170,12 +174,8 @@ opacity: 0.3;
 }
 
 .Ticon{
-  position: absolute;
-  left: 19.01%;
-  right: 80.16%;
-  bottom: 23.98%;
-  background: #131821;
-  opacity: 0.3;
+  left: 365px;
+  top: 808px;
 }
 
 .youtube {
@@ -183,10 +183,37 @@ opacity: 0.3;
 }
 
 .Yicon{
-  position: absolute;
-  left: 22.45%;
-  right: 76.72%;
-  bottom: 24.17%;
-  background: #131821;
-  opacity: 0.3;
+  left: 431px;
+  top: 808px;
+}
+
+.about{
+width: 42px;
+height: 26px;
+left: 331px;
+top: 114px;
+}
+
+.HIW{
+  width: 91px;
+  height: 26px;
+  left: 403px;
+  top: 114px;
+}
+
+.contact{
+width: 56px;
+height: 26px;
+left: 524px;
+top: 114px;
+}
+
+.nav{
+position: absolute;
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 26px;
+color: #6A707B;
 }
