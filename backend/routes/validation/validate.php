@@ -31,7 +31,6 @@ class Validate {
           // handle rules
           switch ($rule) {
 
-            // TODO: upgrade validation, move to seperata scope
             case 'includes_one':
 
               $defined = [];
@@ -47,7 +46,6 @@ class Validate {
               }
 
               break;
-
 
             case 'min':
 
@@ -258,6 +256,5 @@ class Validate {
     return $this->_passed;
   }
 }
-
 
  ?>
