@@ -3,76 +3,66 @@
   <head>
     <link rel="stylesheet" href="assets/margins.css">
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/nav.css">
+    <link rel="stylesheet" href="assets/email.css">
     <link rel="stylesheet" href="assets/social.css">
+    <link rel="stylesheet" href="assets/success.css">
+    <script defer src="/assets/scripts.js"></script>
     </link>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
   </head>
-
   <body>
-
    <div class = "PageContent">
-
-        <!--- Šito nahuj neaiztit --->
-        <div class="Left">
-          <div class="logo">
-            <img src="assets/images/Union.jpg" alt="Union">
+    <div class="Header">
+      <div class="HeaderLogoText">
+        <img class="logo" src="assets/images/Union.jpg" alt="Union">
+        <img class="logotxt" src="assets/images/pineapple..jpg" alt="pineapple">
+      </div>
+       <nav>
+         <a href="#">About</a>
+         <a href="#">How it works</a>
+         <a href="#">Contact</a>
+       </nav>
+      </div>
+      <div class="Left">
+       <div class="Left-Wrapper">
+        <div id="success" class="Success">
+          <div class="Icon"></div>
+          <div class="Text">
+            <h1>Thanks for subscribing!</h1>
+            <p>You have successfully subscribed to our email listing. Check your email for the discount code.</p>
           </div>
-          <div class="logotxt">
-            <img src="assets/images/pineapple..jpg" alt="pineapple">
-          </div>
-
-          <div class="about nav">About</div>
-          <div class="HIW nav">How it works</div>
-          <div class="contact nav">Contact</div>
-
-
-
-
-            <h1 class="heading">Subscribe to newsletter</h1>
-            <p class="subheading">Subscribe to our newsletter and get 10% discount on pineapple glasses.</p>
-
-          <div class="box">
-          </div>
-
-          <div class="line"></div>
-
-          <div class="arrow">
-            <img src="assets/images/ic_arrow.jpg" alt="Arrow">
-          </div>
-
-          <div class="checkbox">
-          </div>
-
-          <div class="checkmark">
-            <img src="assets/images/ic_checkmark-2.png" alt="Checkmark">
-          </div>
-
-          <p class="agree">I agree to <a href="#Terms_of_service" style="color:black">terms of service</a></p>
-
-          <div class="Dline"></div>
-
-          <div class="circleBase facebook"></div>
-            <img class="Ficon IconBase" src="assets/images/ic_facebook.jpg" alt="facebook">
-
-          <div class="circleBase instagram"></div>
-            <img class= "Iicon IconBase" src="assets/images/ic_instagram.jpg" alt="instagram">
-
-          <div class="circleBase twitter"></div>
-            <img class="Ticon IconBase" src="assets/images/ic_twitter.jpg" alt="twitter">
-
-          <div class="circleBase youtube"></div>
-            <img class="Yicon IconBase" src="assets/images/ic_youtube.jpg" alt="youtube">
-
         </div>
-
-     <!--- Šito nahuj neaiztit --->
+        <div id="subscribe" class ="Subscribe">
+          <div class="Subscribe-TopText">
+           <h1>Subscribe to newsletter</h1>
+           <p>Subscribe to our newsletter and get 10% discount on pineapple glasses.</p>
+          </div>
+          <form id="form" class="Form" action="./backend/routes/insert.php">
+            <div class="Blueline"></div>
+            <input type="text" class="email" id="email" placeholder="Type your email address here..."></input>
+            <div class="arrow" id="submit"></div>
+            <label class="container">
+              <input type="checkbox" id="checkbox">
+              <span id="agree" class="checkmark"></span>
+            </label>
+          </form>
+          <p class="error" id="err"></p>
+          <p class="agree">I agree to <a href="#Terms_of_service" class="Terms">terms of service</a></p>
+        </div>
+        <div class="SocialMedia">
+          <div class="SocialMedia-LinksWrapper">
+            <a class="Facebook" href="#"></a>
+            <a class="Instagram" href="#"></a>
+            <a class="Twitter" href="#"></a>
+            <a class="Youtube" href="#"></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="Right">
       <img src="assets/images/image_summer.jpg" alt="image_summer">
     </div>
-
-
-  </div>
-
   </body>
 </html>

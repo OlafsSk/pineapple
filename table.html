@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	</head>
+	<body id="body">
+		<form>
+			<input type="text" id="search" name="search" placeholder="Value To Search">
+			<br>
+			<div id="buttons"></div>
+			<div id="sort-buttons">
+				<button id="sortDataByDate" >Sort By Date</button>
+				<button id="sortDataByEmail">Sort By Email</button>
+			</div>
+			<table align = "center" id="table" border="1">
+				<tr>
+					<th>id</th>
+					<th>email</th>
+					<th>date_added</th>
+					<th>delete</th>
+				</tr>
+			</table>
+		</form>
+		<script>
+			var xmlHttp = new XMLHttpRequest();
+	    xmlHttp.open( 'GET', 'http://127.0.0.1/backend/routes/get.php', false );
+	    xmlHttp.send( null );
+
+	    let list = JSON.parse(xmlHttp.responseText)
+			let filteredList = [...list]
+			let searchText = ''
+			let activeDomainFilter = ''
+			let domainList = []
+			sortDataByDate()
+
+			function sortDataByDate() {
+				list.sort(
+				  function(a,b){
+				    return Date.parse(new Date(a.date_added)) - Date.parse(new Date(b.date_added));
+				  }
+				);
+				filteredList.sort(
+				  function(a,b){
+				    return Date.parse(new Date(a.date_added)) - Date.parse(new Date(b.date_added));
+				  }
+				);
+				handleSearchChange()
+			}
+
+			function sortDataByEmail() {
+				filteredList.sort((a, b) => a.email.localeCompare(b.email))
+				list.sort((a, b) => a.email.localeCompare(b.email))
+				handleSearchChange()
+			}
+
+			renderTableChilren()
+
+			for (const row of list) {
+				if (row.email) {
+					const atIndex = row.email.indexOf('@')
+					const domain = row.email.substr(atIndex)
+
+					if (!domainList.includes(domain)) {
+						domainList.push(domain)
+					}
+				}
+			}
+
+			const buttonsEl = document.getElementById('buttons')
+
+			domainList.map((domain, index) => {
+
+				const button = document.createElement('button')
+				const textnode = document.createTextNode(domain)
+				button.setAttribute('id', `button-${index}`);
+
+				button.appendChild(textnode)
+
+				buttonsEl.appendChild(button)
+
+				document.getElementById(`button-${index}`).addEventListener('click', function(event) {
+					event.preventDefault();
+					activeDomainFilter = event.target.innerHTML
+					handleSearchChange()
+
+				})
+			})
+
+			if (domainList.length) {
+				const button = document.createElement('button')
+				const textnode = document.createTextNode('REMOVE')
+				button.setAttribute('id', `button-remove`);
+
+				button.appendChild(textnode)
+
+				buttonsEl.appendChild(button)
+
+				document.getElementById(`button-remove`).addEventListener('click', function(event) {
+					event.preventDefault();
+					activeDomainFilter = ''
+					handleSearchChange()
+
+				})
+			}
+
+			document.getElementById('sortDataByDate').addEventListener('click', function(event) {
+				event.preventDefault();
+				sortDataByDate()
+				handleSearchChange()
+
+			})
+
+			document.getElementById('sortDataByEmail').addEventListener('click', function(event) {
+				event.preventDefault();
+				sortDataByEmail()
+				handleSearchChange()
+
+			})
+
+			function renderTableChilren() {
+				const table = document.getElementById('table')
+
+				table.innerHTML = '<tr>\
+					<th>id</th>\
+					<th>email</th>\
+					<th>date_added</th>\
+					<th>delete</th>\
+				</tr>'
+
+				for (const item in filteredList) {
+					const itemKeys = Object.keys(filteredList[item])
+
+					const row = document.createElement('TR')
+
+					for (const itemKey of itemKeys) {
+						const field = document.createElement('TD')
+						const textnode = document.createTextNode(filteredList[item][itemKey])
+
+						field.appendChild(textnode)
+
+						row.appendChild(field)
+
+					}
+
+					const fieldForButton = document.createElement('TD')
+					const deleteButton = document.createElement('button')
+					const textnodeForButton = document.createTextNode('delete')
+
+					deleteButton.setAttribute('id', `deleteButton-${filteredList[item].id}`);
+
+					deleteButton.onclick = function (e) {
+
+						const atIndex = e.target.id.indexOf('-')
+						const idOfRowToDelete = e.target.id.substr(atIndex + 1)
+
+						const xhr = new XMLHttpRequest();
+					  xhr.open("POST", 'backend/routes/delete.php', true);
+					  xhr.setRequestHeader('Content-Type', 'application/json');
+					  xhr.send(JSON.stringify({
+					      id: parseInt(idOfRowToDelete)
+					  }));
+					}
+
+					deleteButton.appendChild(textnodeForButton)
+
+					fieldForButton.appendChild(deleteButton)
+
+					row.appendChild(fieldForButton)
+
+					table.appendChild(row)
+
+				}
+
+			}
+
+			document.getElementById('search').addEventListener('keyup', handleSearchChange);
+
+			function handleSearchChange(event) {
+				if (event) {
+					searchText = event.target.value
+				}
+
+			 	if (!searchText.length && !activeDomainFilter) {
+				 	filteredList = [...list]
+					renderTableChilren()
+					return
+				 }
+
+				filteredList = []
+
+				for (const row of list) {
+
+					if (
+						searchText.length &&
+						row.id && row.id.toString().includes(searchText) ||
+						row.email && row.email.toString().includes(searchText) ||
+						row.date_added && row.date_added.toString().includes(searchText)
+					) {
+						if (activeDomainFilter) {
+							if (row.email.toString().includes(activeDomainFilter)) {
+								filteredList.push(row)
+							}
+						} else {
+							filteredList.push(row)
+						}
+					}
+				}
+
+				renderTableChilren()
+			}
+		</script>
+	</body>
+</html>

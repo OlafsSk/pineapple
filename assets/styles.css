@@ -1,29 +1,62 @@
 .PageContent {
   display: flex;
   height: 100vh;
-  width: 100vw;
-  min-height: 650px;
+  width: 100%;
+  min-height: 812px;
+  overflow-y: hidden;
 }
 
 .Left {
-  positon: absolute
   display: block;
   background-color: black;
-  width: 680px;
+  min-width: 335px;
+  width: calc(100vw - 40px);
   background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
-  height: 1080px;
-  margin: 0;
-  position: relative;
+  height: 371px;
+  margin: 253px 20px 0px;
+  position: absolute;
   z-index: 1;
-  left: 0px;
-  top: 0px;
+}
+
+.Left-Wrapper {
+  padding: 0px calc(100% - 509px) 23px;
 }
 
 .Right {
-  positon: absolute;
-  height: 100vh;
   overflow: hidden;
-  width: 1620px;
-  height: 1080px;
-  top: 0px;
+  min-height: 746px;
+  min-width: 375px;
+  top: 66px;
+  left: 321px;
+}
+
+@media only screen and (min-width: 768px){
+
+  .PageContent{
+    min-height: 650px;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .Left {
+    width: 680px;
+    min-height: calc(100vh - 141px);
+    margin: 0;
+    padding-top: 141px;
+  }
+
+  .Left-Wrapper {
+    padding: 0px
+  }
+
+  .Right {
+    overflow: hidden;
+    width: calc(100vw - 680px);
+    height: 100%;
+    min-height: 650px;
+    position: absolute;
+    top: 0px;
+    left: 680px;
+
+  }
 }

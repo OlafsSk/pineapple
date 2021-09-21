@@ -1,0 +1,376 @@
+.Form{
+  display: flex;
+  height: 88px;
+}
+
+.Subscribe{
+  display: block;
+  padding: 0px 0px 23px;
+  width: 100%;
+  margin-bottom: 115px;
+}
+
+.Subscribe-TopText{
+  padding-top: 31px;
+  margin: 0px 0px 0px 20px;
+}
+
+.Subscribe-TopText h1{
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  color: #131821;
+}
+
+.Subscribe-TopText p{
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  color: #6A707B;
+  margin-top: -1px;
+  width: 256px;
+}
+
+.heading{
+  position: absolute;
+  width: 399px;
+  height: 44px;
+  left: 140px;
+  top: 374px;
+  font-family: Georgia;
+  color: #131821;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.subheading{
+  position: absolute;
+  width: 400px;
+  height: 56px;
+  left: 140px;
+  top: 434px;
+  font-family: Arial;
+  color: #6A707B;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.line{
+  position: absolute;
+  width: 4px;
+  height: 70px;
+  left: 100px;
+  top: 539px;
+  background: #4066A5;
+}
+
+.email{
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #6A707B;
+  border: 1px solid #E3E3E4;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  position: absolute;
+  width: 295px;
+  height: 60px;
+  padding-left: 20px;
+  padding-top: 3px;
+  margin: 0px 0px 0px 20px;
+}
+
+.email:placeholder{
+  color: black;
+}
+
+.email:focus{
+  box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+  border: 1px solid #4066A5;
+  box-sizing: border-box;
+  width: 295px;
+  height: 60px;
+}
+
+.email:hover{
+  position: absolute;
+  border: 1px solid #4066A5;
+  box-sizing: border-box;
+  width: 295px;
+  height: 60px;
+}
+
+.error{
+  margin: -30px 29px 28px;
+  font-size: small;
+  font-weight: lighter;
+  color: #6A707B;
+}
+
+.arrow{
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 15px;
+  width: 25px;
+  margin: 24px 0px 0px 276px;
+  background-image: url(./images/ic_arrow.svg);
+  background-size: 24px;
+  z-index: 1;
+  display: none;
+  cursor: pointer;
+}
+
+.arrow:hover{
+background-image: url(./images/ic_arrow_hover.svg);
+}
+
+.container {
+  width: 26px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  margin: 82px 0px 0px 20px;
+}
+
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #4066A5;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.agree{
+  position: absolute;
+  width: 359px;
+  height: 28px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6A707B;
+  margin: -78px 0px 0px 61px;
+}
+
+.Terms{
+  color: #131821;
+}
+
+.Terms:hover{
+  color: #4066A5;
+}
+
+.Terms:active{
+  color: #233759;
+}
+
+.line{
+  position: absolute;
+  width: 400px;
+  height: 1px;
+  left: 140px;
+  top: 740px;
+  background: #E3E3E4;
+}
+
+.Blueline{
+  display: flex;
+  width: 4px;
+  height: 60px;
+  position: absolute;
+  background: #4066A5;
+  z-index: 1;
+  margin: 0px 0px 0px 20px;
+}
+
+@media only screen and (min-width: 768px){
+
+  .Subscribe-TopText{
+    padding-top: 234px;
+    margin: 0px;
+  }
+
+  .error{
+    display: flex;
+    top: 600px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6A707B;
+    z-index: 1;
+    margin: 44px 0px 0px;
+  }
+
+  .Subscribe-TopText h1{
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 44px;
+    color: #131821;
+  }
+
+  .Subscribe-TopText p{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6A707B;
+    width: 400px;
+    margin-top: 15px;
+  }
+
+  .email{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #6A707B;
+    left: 100px;
+    top: 539px;
+    border: 1px solid #E3E3E4;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    position: absolute;
+    width: 663px;
+    height: 70px;
+    padding-left: 43px;
+    padding-top: 3px;
+    margin: 0;
+  }
+
+  .email:focus{
+    box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+    border: 1px solid #4066A5;
+    box-sizing: border-box;
+    width: 663px;
+    height: 70px;
+  }
+
+  .email:hover{
+    position: absolute;
+    border: 1px solid #4066A5;
+    box-sizing: border-box;
+    width: 663px;
+    height: 70px;
+  }
+
+  .Blueline{
+    display: flex;
+    width: 4px;
+    height: 70px;
+    left: 100px;
+    top: 539px;
+    position: absolute;
+    background: #4066A5;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .agree{
+    position: absolute;
+    width: 359px;
+    height: 28px;
+    left: 181px;
+    top: 663px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6A707B;
+    margin: 0;
+  }
+
+  .container {
+    top: 663px;
+    left: 141px;
+    width: 26px;
+    height: 26px;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .Subscribe{
+    display: block;
+    padding: 0px 140px 0px;
+    overflow-y: scroll;
+    width: calc(100% - 280px);
+    margin-bottom: 60px;
+  }
+
+  .arrow{
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 15px;
+    width: 25px;
+    background-image: url(./images/ic_arrow.svg);
+    background-size: 24px;
+    z-index: 1;
+    margin-left: 559px;
+    margin-top: 77px;
+    display: none;
+    cursor: pointer;
+  }
+}

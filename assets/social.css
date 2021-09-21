@@ -1,130 +1,17 @@
-.logo{
-  position: absolute;
-  width: 25px;
-  height: 40px;
-  left: 100px;
-  top: 100px;
+.SocialMedia{
+  width: 295px;
+  margin: 0px 0px 0px 13px;
+  margin-top: -169px;
+  border-top: solid 1px #E3E3E4;
+  height: 160px;
 }
 
-.logotxt{
-  position: absolute;
-  width: 78px;
-  height: 16px;
-  left: 140px;
-  top: 120px;
-}
-
-.links{
-position: absolute;
-width: 42px;
-height: 26px;
-left: 331px;
-top: 114px;
-font-family: Arial;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 26px;
-}
-
-.heading{
-position: absolute;
-width: 399px;
-height: 44px;
-left: 140px;
-top: 374px;
-font-family: Georgia;
-color: #131821;
-font-style: normal;
-font-weight: normal;
-font-size: 32px;
-line-height: 44px;
-}
-
-.subheading{
-position: absolute;
-width: 400px;
-height: 56px;
-left: 140px;
-top: 433px;
-font-family: Arial;
-color: #6A707B;
-font-family: Arial;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 28px;
-}
-
-.line{
-position: absolute;
-width: 4px;
-height: 70px;
-left: 100px;
-top: 539px;
-background: #4066A5;
-}
-
-.box{
-position: absolute;
-width: 663px;
-height: 70px;
-left: 100px;
-top: 539px;
-background: #FFFFFF;
-border: 1px solid #E3E3E4;
-box-sizing: border-box;
-}
-
-.arrow{
-  position: absolute;
-  width: 24px;
-  height: 14px;
-  left: 699px;
-  top: 567px;
-  background: #131821;
-}
-
-.checkbox{
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  left: 140px;
-  top: 662px;
-  background: #4066A5;
-  border-radius: 3px;
-}
-
-.checkmark{
-  position: absolute;
-  width: 14px;
-  height: 11px;
-  left: 146px;
-  top: 670px;
-}
-
-.agree{
-position: absolute;
-width: 359px;
-height: 28px;
-left: 181px;
-top: 663px;
-font-family: Arial;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 28px;
-color: #6A707B;
-}
-
-.line{
-position: absolute;
-width: 400px;
-height: 1px;
-left: 140px;
-top: 740px;
-
-background: #E3E3E4;
+.SocialMedia-LinksWrapper{
+  display: flex;
+  padding-top: 40px;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0px 41px 0px;
 }
 
 .Dline{
@@ -133,87 +20,152 @@ background: #E3E3E4;
   height: 70px;
   left: 100px;
   top: 539px;
-
   background: #4066A5;
 }
 
-.circleBase {
-  position: absolute;
-  width: 44px;
-  height: 44px;
+.Facebook {
+  background-image: url("./images/ic_facebook.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 42px;
+  height: 42px;
   border-radius: 100%;
   border: 2px solid #E2E3E4;
-  top: 790px;
+  top: 791px;
+  left:219px;
+  transition: 0.2s;
 }
 
-.facebook {
-    left: 217px;
+.Facebook:hover {
+  border: 2px solid #4267B2;
+  background: #4267B2;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  background-image: url("./images/ic_facebook_hover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
 }
 
-.IconBase {
-  position: absolute;
-  background: #131821;
+.Facebook:active {
+  border: 2px solid #2F4A80;
+  background: #2F4A80;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  background-image: url("./images/ic_facebook_hover.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.Ficon{
-left: 237px;
-top: 805px;
+.Instagram {
+  background-image: url("./images/ic_instagram.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  border: 2px solid #E2E3E4;
+  left: 284px;
+  top: 791px;
+  transition: 0.2s;
 }
 
-.instagram {
-    left: 283px;
+.Instagram:hover {
+  border: 2px solid #C13584;
+  background: #C13584;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  background-image: url("./images/ic_instagram_hover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
 }
 
-.Iicon{
-  left: 300px;
-  top: 805px;
+.Instagram:active {
+  border: 2px solid #8F2762;
+  background: #8F2762;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  background-image: url("./images/ic_instagram_hover.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.twitter {
-    left: 349px;
+.Twitter {
+  background-image: url("./images/ic_twitter.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  border: 2px solid #E2E3E4;
+  left: 350px;
+  top: 791px;
+  transition: 0.2s;
 }
 
-.Ticon{
-  left: 365px;
-  top: 808px;
+.Twitter:hover {
+  border: 2px solid #1DA1F2;
+  background: #1DA1F2;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  background-image: url("./images/ic_twitter_hover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
 }
 
-.youtube {
-    left: 415px;
+.Twitter:active {
+  border: 2px solid #177FBF;
+  background: #177FBF;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  background-image: url("./images/ic_twitter_hover.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.Yicon{
-  left: 431px;
-  top: 808px;
+.Youtube {
+  background-image: url("./images/ic_youtube.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  border: 2px solid #E2E3E4;
+  left: 416px;
+  top: 791px;
+  transition: 0.2s;
 }
 
-.about{
-width: 42px;
-height: 26px;
-left: 331px;
-top: 114px;
+.Youtube:hover {
+  border: 2px solid #FF0000;
+  background: #FF0000;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  background-image: url("./images/ic_youtube_hover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
 }
 
-.HIW{
-  width: 91px;
-  height: 26px;
-  left: 403px;
-  top: 114px;
+.Youtube:active {
+  border: 2px solid #CC0000;
+  background: #CC0000;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  background-image: url("./images/ic_youtube_hover.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.contact{
-width: 56px;
-height: 26px;
-left: 524px;
-top: 114px;
-}
+@media only screen and (min-width: 768px){
 
-.nav{
-position: absolute;
-font-family: Arial;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 26px;
-color: #6A707B;
+  .SocialMedia{
+    width: calc(100% - 280px);
+    margin: 0 140px 0;
+    margin-top: 49px;
+    border-top: solid 1px #E3E3E4;
+    height: 160px;
+  }
+
+  .SocialMedia-LinksWrapper{
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 0px 78px 0;
+  }
 }
